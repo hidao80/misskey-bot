@@ -4,8 +4,8 @@ This is a submission shell script for Misskey that is easy to use with cron.
 
 ## Usage
 
-```txt:Script usage
-usage: $0 [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
+```txt
+usage: send_to_misskey.sh [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
     token:      Specify an API token. If not, refer to the environment variable MISSKEY_TOKEN.
     text:       Text to be sent
     visibility: Specify the scope of disclosure. If not, refer to the environment variable MISSKEY_VISIBLITY.
@@ -14,7 +14,7 @@ usage: $0 [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
 
 ### Example of using cron
 
-```txt:crontab example
+```txt
 # Runs only once a day, at a random time
  0  0 * * * sleep $(expr $RANDOM$RANDOM \% 86400); sh ~/bin/send_to_misskey.sh -t $(shuf -n 1 ~/bot/misskey/bot.words) -i $MISSKEY_TOKEN https://misskey.dev/api/notes/create > /dev/null
 
