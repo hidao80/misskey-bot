@@ -12,6 +12,8 @@ usage: send_to_misskey.sh [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
                 Possible values are "public", "home", "followers", "specified". Default: "public"
 ```
 
+The note breaks at the location of the string `\\\\n`.
+
 ### Example of using cron
 
 ```text
