@@ -4,7 +4,7 @@ This is a submission shell script for Misskey that is easy to use with cron.
 
 ## Usage
 
-```txt
+```text
 usage: send_to_misskey.sh [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
     token:      Specify an API token. If not, refer to the environment variable MISSKEY_TOKEN.
     text:       Text to be sent
@@ -14,7 +14,7 @@ usage: send_to_misskey.sh [-h] [-i <token>] [-t <text>] [-v <visibility>] <url>
 
 ### Example of using cron
 
-```txt
+```text
 # Runs only once a day, at a random time
  0  0 * * * sleep $(expr $RANDOM$RANDOM \% 86400); sh ~/bin/send_to_misskey.sh -t $(shuf -n 1 ~/bot/misskey/bot.words) -i $MISSKEY_TOKEN https://misskey.dev/api/notes/create > /dev/null
 
